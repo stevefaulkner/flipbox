@@ -13,41 +13,154 @@
 
 	<style>
     x-flipbox{
-      height: 300px;
-      width: 220px;
-      margin-top: 1em;
+      height: 400px;
+      width: 450px;
+	  border:thin solid #060;
+	  padding-top:1em;
     }
 
     x-flipbox > *:first-child {
-      background-color: red;
+     padding: 1em;
     }
     x-flipbox > *:last-child {
-      background-color: blue;
+      background-color: white;
+	   padding: 1em;
     }
+	x-flipbox > div {width:350px; height: 350px;}
     button{
       padding: 1em;
     }
-	</style>
+	
+	x-flipbox > p {text-align:center}
+    button{
+      padding: 1em;
+    }
+	
+	body
+
+{
+
+	font: normal 85%  arial, Verdana, helvetica, sans-serif;
+
+	color: #333;
+
+	background: #fff;
+
+	padding: 0 1em;
+
+}
+
+
+
+h1, h2
+
+{
+
+	color: #630;
+
+	background: #fff;
+
+	padding-bottom: 0.5em;
+
+	margin-bottom: 0;
+
+}
+
+
+
+x-flipbox > div table
+
+{
+border-collapse:collapse;
+	width:90%;
+
+	border: 1px solid #630;	
+	
+font: normal 90% arial, Verdana, helvetica, sans-serif;
+}
+
+x-flipbox > div table tr th {text-align:left}
+
+
+x-flipbox > div table > th, x-flipbox > div table  td
+
+{
+
+	text-align: left;
+
+	vertical-align: top;
+
+	padding: 0.3em;
+
+	border: 1px solid #630;
+
+}
+
+
+
+
+x-flipbox > div table caption {text-align:left;font-weight:bold;font-size:small}
+
+
+
+	
+	
+	
+	thead th, thead td, th {
+
+	font-weight: bold;
+background-color:#ffffff;
+	text-align: center;
+
+}
+
+.a2 {float:left; margin-left: 2em;margin-bottom:5em;}
+
+footer {clear:both;margin-top:5em;}
+
+    </style>
 </head>
 
 <body>
 
-	<h2>Create a Demo</h2>
+	<h1>flip box web component demos</h1>
 
-  <button data-action-type="toggleFlip">Flip</button>
-  <button data-action-type="toggleDirection">Switch Flip Direction (right)</button>
-  <hr/>
-  <x-flipbox>
-      <img src="birnimal-graph.png"/>
-      <img src="birnimal-settings.png"/>
+ <p>Using the flipbox web component to display rich text alternatives for images. </p>
+<p>Pressing the flip button displayes rich text alternatives for the images</p>
+<p><button data-action-type="toggleFlip">Flip</button></p>  
+<hr/> 
+  <div class="a2">
+  <h2>example 1 </h2>
+    <x-flipbox>
+      <p><img src="http://www.w3.org/html/wg/drafts/html/master/images/flowchart.png" alt="flowchart: trying to fix a broken lamp."></p>
+      <div>
+        <h3>Dealing with a broken lamp</h3>
+        <ol>
+          <li>Check if it's plugged in, if not, plug it in.</li>
+          <li>If it still doesn't work; check if the bulb is burned out. If it is, replace the bulb.</li>
+          <li>If it still doesn't work; buy a new lamp.</li>
+        </ol>
+      </div>
+      </x-flipbox>
+  </div>
+<div class="a2">
+  <h2>example 2 </h2>
+    <x-flipbox>
+      <p><img src="http://www.w3.org/html/wg/drafts/html/master/images/table.gif" alt="Bar chart: Average rainfall in millimetres by Country and Season."></p>
+      <div>
+        <table>
+          <caption>Rainfall in millimetres by Country and Season.</caption>
+          <tr><td><th scope="col">UK <th scope="col">Japan<th scope="col">Australia</tr>
+          <tr><th scope="row">Spring <td>5.5 (highest)<td>2.4 <td>2 (lowest)</tr>
+          <tr><th scope="row">Summer <td>4.5 (highest)<td>3.4<td>2 (lowest)</tr>
+          <tr><th scope="row">Autumn <td>3.5 (highest) <td>1.8 <td>1.5 (lowest)</tr>
+          <tr><th scope="row">Winter <td>1.5 (highest) <td>1.2 <td>1 (lowest)</tr>
+        </table>
+      </div>
   </x-flipbox>
+</div>
 
-  <x-flipbox>
-      <div><h1>Front</h1></div>
-      <div><h1>Back</h1></div>
-  </x-flipbox>
-
-
+<footer>some blah in footer</footer>
 
 
 </body>
